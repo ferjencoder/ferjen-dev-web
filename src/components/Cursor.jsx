@@ -1,6 +1,5 @@
-//import { useRef } from 'react';
 import { useState } from 'react';
-import '../dist/assets/index-421f0d71.css';
+import '../docs/assets/index-421f0d71.css';
 
 export const Cursor = () => {
   const [cursorX, setCursorX] = useState();
