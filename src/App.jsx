@@ -10,7 +10,7 @@ import {
 
 import Particles from './components/ParticlesBackground';
 
-import './assets/scss/style.scss';
+import '../dist/assets/index-421f0d71.css';
 
 const App = () => {
   return (

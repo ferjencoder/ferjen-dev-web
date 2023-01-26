@@ -1,6 +1,6 @@
 //import { useRef } from 'react';
 import { useState } from 'react';
-import '../assets/scss/style.scss';
+import '../dist/assets/index-421f0d71.css';
 
 export const Cursor = () => {
   const [cursorX, setCursorX] = useState();
