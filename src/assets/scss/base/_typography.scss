@@ -1,0 +1,20 @@
+//@use '../abstract/variables';
+
+// FONTS
+$ff-primary: 'Antonio', sans-serif;
+$ff-secondary: 'Fira Mono', monospace;
+$ff-text: 'Public Sans', sans-serif;
+
+.text--primary {
+  font-family: $ff-primary;
+  letter-spacing: $spacing-lg;
+  color: white;
+}
+
+.text--secondary {
+  font-family: $ff-secondary;
+}
+
+.text--text {
+  font-family: $ff-text;
+}
