@@ -1,0 +1,45 @@
+//.cursor__dot,
+//.cursor_blob {
+//  pointer-events: none;
+//  position: absolute;
+//  top: 50%;
+//  opacity: 1;
+//  transition: opacity 0.3s ease-in-out;
+//  transform: 0.3s ease-in-out;
+//}
+//
+//.cursor__dot {
+//  width: 1.5rem;
+//  height: 1.5rem;
+//  background-color: #242424;
+//}
+//
+//.cursor_blob {
+//  width: 6rem;
+//  height: 6rem;
+//  background-color: red;
+//}
+
+.cursor {
+  width: 0.6rem;
+  height: 0.6rem;
+  background-color: black;
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 8000;
+}
+
+.cursor__halo {
+  position: fixed;
+  width: 4rem;
+  height: 4rem;
+  pointer-events: none;
+  //border: 2px solid black;
+  //background-color: #2424249a;
+  border-radius: 50%;
+  transform: translate(-2rem, -2rem);
+  transition: 0.2s;
+  z-index: 8000;
+}
