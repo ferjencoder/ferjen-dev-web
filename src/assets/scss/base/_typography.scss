@@ -18,3 +18,22 @@ $ff-text: 'Public Sans', sans-serif;
 .text--text {
   font-family: $ff-text;
 }
+
+.bg-line {
+  background-color: #242424;
+  //width: calc(100vw - 4rem);
+  //height: auto;
+  z-index: -1;
+}
+
+.hero__text--xxl {
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  font-family: $ff-primary;
+  font-weight: 600;
+  line-height: 1.2em;
+  padding-right: 0.05em;
+  user-select: none;
+  z-index: 8000;
+}
