@@ -56,6 +56,30 @@ $spacing: 0.1rem;
 $spacing-lg: 0.2rem;
 $radius: 0.25rem;
 
+//FONTS
+
+$font-size-base: 1rem; // Assumes the browser default, typically `16px`
+$font-size-sm: $font-size-base * .875;
+$font-size-lg: $font-size-base * 1.25;
+
+$h1-font-size: $font-size-base * 7; //7
+$h2-font-size: $font-size-base * 5; //
+$h3-font-size: $font-size-base * 4;
+$h4-font-size: $font-size-base * 3;
+$h5-font-size: $font-size-base * 2;
+$h6-font-size: $font-size-base;
+// scss-docs-end font-variables
+
+// scss-docs-start font-sizes
+$font-sizes: (
+  1: $h1-font-size,
+  2: $h2-font-size,
+  3: $h3-font-size,
+  4: $h4-font-size,
+  5: $h5-font-size,
+  6: $h6-font-size
+);
+
 // BTN MODIFIED
 //$btn-font-size: 1.5rem;
 //$btn-border-radius: 0;
