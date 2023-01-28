@@ -1,4 +1,4 @@
-import { addDoc, collection, doc, getDoc, query } from 'firebase/firestore';
+import { addDoc, collection, doc, getDoc } from 'firebase/firestore';
 import { db } from '../data/dbConfig';
 
 export const uploadPortfolio = () => {
@@ -12,7 +12,7 @@ export const uploadPortfolio = () => {
     welcome: {
       message: "Hello!, I'm Fernanda Jensen, FullStack Developer",
       aboutme:
-        'I first discovered my passion for programming in 2001 when I learned PHP and had loads of fun creating websites and animations as a hobby. Despite not pursuing it as a career at the time, I continued to tinker with coding and design in my spare time. After completing my degree in International Relations and Business Analysis, I began a successful career in the Oil & Gas industry as a Controller and Project Manager. However, in 2019, the need for smarter tools in my team led me to study Visual Basic for Applications, reigniting my passion for programming and problem-solving. I knew then that I wanted to make a career change and in 2022, I took the leap and enrolled in an intensive 12-month programming bootcamp to learn the latest technologies and skills needed to become a Junior front-end developer. Now I am excited to be back in the field and ready to tackle new challenges.',
+        'I first discovered my passion for programming in 2001 when I learned PHP and had loads of fun creating websites and animations as a hobby. Despite not pursuing it as a career at the time, I continued to tinker with coding and design in my spare time. After completing my degree in International Relations and Business Analysis, I began a successful career in the Oil & Gas industry as a Planner and Controller. However, in 2019, the need for smarter tools in my team led me to study Visual Basic, reigniting my passion for programming and problem-solving. I knew then that I wanted to make a career change and in 2022, I took the leap and enrolled in an intensive 12-month programming bootcamp to learn the latest technologies and skills needed to become a Junior full stack developer. Now I am excited to be back in the field and ready to tackle new challenges.',
     },
     projects: [
       {
@@ -73,24 +73,49 @@ export const uploadPortfolio = () => {
   console.log({ enColRef });
 };
 
-export const navBarLinksFetch = async (language = 'en') => {
-  let link;
+export const navBarLinksFetch = async (language = '') => {
+  //console.log(db);
 
-  const docRef = doc(
-    db,
-    'portfolio',
-    'website',
-    'english',
-    'kTuKQWH20ahGEAbAKyLQ'
-  );
-  const docSnap = await getDoc(docRef);
+  if (language == 'en') {
+    console.log('language');
 
-  if (docSnap.exists()) {
-    return {
-      ...docSnap.data(),
-    };
+    const docRef = doc(
+      db,
+      'portfolio',
+      'website',
+      'english',
+      'kTuKQWH20ahGEAbAKyLQ'
+    );
+    const docSnap = await getDoc(docRef);
+    if (docSnap.exists()) {
+      const data = {
+        ...docSnap.data(),
+      };
+      console.log(data);
+
+      return data;
+    } else {
+      console.log('No such document!');
+    }
   } else {
-    console.log('No such document!');
+    console.log('not a language');
+    const docRef = doc(
+      db,
+      'portfolio',
+      'website',
+      'spanish',
+      'xJa0XhNUA94C3b3cSnfy'
+    );
+    const docSnap = await getDoc(docRef);
+    if (docSnap.exists()) {
+      const data = {
+        ...docSnap.data(),
+      };
+      console.log(data);
+
+      return data;
+    } else {
+      console.log('No such document!');
+    }
   }
-  return eng;
 };

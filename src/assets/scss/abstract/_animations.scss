@@ -46,6 +46,40 @@
   animation: fontColor 30s linear infinite;
 }
 
+@keyframes fontColor {
+  0% {
+    color: #fead56;
+  }
+
+  15% {
+    color: #70bd40;
+  }
+
+  30% {
+    color: #47eaff;
+  }
+
+  45% {
+    color: #8e57e7;
+  }
+
+  60% {
+    color: #c652e3;
+  }
+
+  75% {
+    color: #f84e69;
+  }
+
+  90% {
+    color: #ff6347;
+  }
+
+  100% {
+    color: #fead56;
+  }
+}
+
 //* WOBBLY TEXT
 .text__wobbly--outline:hover {
   -webkit-text-fill-color: darken($color: #ffffff, $amount: 0);
